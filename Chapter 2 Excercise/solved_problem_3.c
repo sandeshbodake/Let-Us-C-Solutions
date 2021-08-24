@@ -2,10 +2,11 @@
 int main()
 {
     int rup, hundreds_notes, reamaining_hundred_notes_amt, fifties_notes, 
-    reamaining_fifty_notes_amt, total_notes, tenrs_notes, 
+    reamaining_fifty_notes_amt, tenrs_notes, 
     reamaining_ten_notes_amt, fivers_note, 
     reamaining_five_notes_amt, twors_note, 
-    reamaining_two_notes_amt, oners_note;
+    reamaining_two_notes_amt, oners_note,
+    total_notes;
     
     printf("\nEnter amount: ");
     scanf("%d", &rup);
@@ -43,4 +44,29 @@ int main()
     printf("\nTotal notes: %d", total_notes);
     
 
+}
+
+/////////////// Or ///////////////
+
+#include<stdio.h>
+int main()
+{
+    int amount ,notehun, notefift, noteten, notefive, notetwo, noteone, total;
+    printf("\nEnter Amount: ");
+    scanf("%d", &amount);
+    notehun = amount / 100;
+    amount = amount % 100;
+    notefift = amount / 50;
+    amount = amount % 50;
+    noteten = amount / 10;
+    amount = amount % 10;
+    notefive = amount / 5;
+    amount = amount % 5;
+    notetwo = amount / 2;
+    amount = amount % 2;
+    noteone = amount / 1;
+    amount = amount % 1;
+    total = notehun + notefift + noteten + notefive + notetwo + noteone;
+    printf("Total notes: %d\n", total);
+    return 0;
 }
